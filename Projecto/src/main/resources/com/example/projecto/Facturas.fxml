@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="TOP_CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.projecto.FacturasController">
+    <HBox spacing="10">
+        <Label text="Número de Factura:" />
+        <TextField fx:id="numeroFacturaField" />
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Fecha:" />
+        <DatePicker fx:id="fechaField" />
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Monto:" />
+        <TextField fx:id="montoField" />
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Proveedor:" />
+        <ComboBox fx:id="proveedorComboBox" />
+    </HBox>
+    <Button text="Agregar Factura" onAction="#agregarFactura" />
+    <TableView fx:id="facturasTable">
+        <columns>
+            <TableColumn text="ID" fx:id="idColumn" />
+            <TableColumn text="Número de Factura" fx:id="numeroFacturaColumn" />
+            <TableColumn text="Fecha" fx:id="fechaColumn" />
+            <TableColumn text="Monto" fx:id="montoColumn" />
+            <TableColumn text="Proveedor" fx:id="proveedorColumn" />
+            <TableColumn text="Estado" fx:id="estadoColumn" />
+        </columns>
+    </TableView>
+    <HBox spacing="10">
+        <Button text="Cambiar a Pagada" onAction="#cambiarEstadoPagada" />
+        <Button text="Cambiar a Pendiente" onAction="#cambiarEstadoPendiente" />
+    </HBox>
+</VBox>

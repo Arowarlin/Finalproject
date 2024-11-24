@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="TOP_CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.projecto.ProveedoresController">
+    <HBox spacing="10">
+        <Label text="Nombre:" />
+        <TextField fx:id="nombreField" />
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Contacto:" />
+        <TextField fx:id="contactoField" />
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Dirección:" />
+        <TextField fx:id="direccionField" />
+    </HBox>
+    <Button text="Agregar Proveedor" onAction="#agregarProveedor" />
+    <TableView fx:id="proveedoresTable">
+        <columns>
+            <TableColumn text="ID" fx:id="idColumn" />
+            <TableColumn text="Nombre" fx:id="nombreColumn" />
+            <TableColumn text="Contacto" fx:id="contactoColumn" />
+            <TableColumn text="Dirección" fx:id="direccionColumn" />
+        </columns>
+    </TableView>
+    <HBox spacing="10">
+        <Button text="Editar" onAction="#editarProveedor" />
+        <Button text="Eliminar" onAction="#eliminarProveedor" />
+    </HBox>
+</VBox>
+
